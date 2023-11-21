@@ -1,0 +1,14 @@
+@use "abstracts";
+@use "vendors";
+@use "base";
+@use "utilities";
+@use "components";
+@use "pages";
+@use "layout";
+@use "themes";
+
+body {
+  font-family: abstracts.$font-family;
+
+  font-weight: bold;
+}
