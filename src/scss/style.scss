@@ -6,9 +6,3 @@
 @use "pages";
 @use "layout";
 @use "themes";
-
-body {
-  font-family: abstracts.$font-family;
-
-  font-weight: bold;
-}

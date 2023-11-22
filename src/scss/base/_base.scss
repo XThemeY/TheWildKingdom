@@ -1,3 +1,42 @@
+@use "../abstracts" as *;
+
+html {
+}
+
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: $font-family, sans-serif;
+  color: $text-Color;
+  font-size: toRem($base-font-size);
+  font-weight: 400;
+  line-height: lineHeightToRem($base-line-height, $base-font-size);
+}
+
+button {
+  display: inline-block;
+  cursor: pointer;
+  color: $btn-text-Color;
+}
+
+a {
+  color: $link-text-Color;
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.menu {
+}
+
+.link {
+  transition: all ease-in-out 0.5s;
+  &:hover {
+    color: $link-text-Hover;
+  }
+}
+
+.body {
+  background-color: $bg-color;
 }

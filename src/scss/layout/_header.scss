@@ -1,0 +1,31 @@
+.header {
+  padding: 35px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    min-width: 216px;
+  }
+
+  &__action {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+}
+
+.menu {
+  &__body {
+    height: 100%;
+  }
+
+  &__list {
+    height: inherit;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+}

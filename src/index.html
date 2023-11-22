@@ -2,10 +2,45 @@
 <html lang="en">
   @@include('html/head.html',{ "title":"The Wild Kingdom - Главная" })
 
-  <body>
+  <body class="body">
     @@include('html/header.html',{})
-    <main>
-      <div class="container"></div>
+    <main class="page">
+      <section class="head">
+        <div class="container head__container">
+          <div class="head__content">
+            <h1 class="head__title">A better world<br />for pets</h1>
+            <button type="button" class="head__button button button--border">
+              Explore
+            </button>
+          </div>
+          <div class="head__slider swiper">
+            <div class="slider__item">
+              <img src="@img/pets/1.png" alt="pet_1" />
+            </div>
+            <div class="slider__item">
+              <img src="@img/pets/1.png" alt="pet_2" />
+            </div>
+            <div class="slider__item">
+              <img src="@img/pets/1.png" alt="pet_3" />
+            </div>
+            <div class="slider__item">
+              <img src="@img/pets/1.png" alt="pet_4" />
+            </div>
+          </div>
+
+          <div class="head__control">
+            <button
+              type="button"
+              class="head__arrow head__arrow--left"
+            ></button>
+            <button
+              type="button"
+              class="head__arrow head__arrow--right"
+            ></button>
+          </div>
+        </div>
+        <img class="head__bg" src="@img/BG.jpg" alt="head-bg" />
+      </section>
     </main>
     @@include('html/footer.html',{})
 
