@@ -30,7 +30,7 @@ export const path = {
     files: `${srcFolder}/files/**/*.*`,
     images: `${srcFolder}/img/**/*.*`,
   },
-  clean: buildFolder,
+  clean: `${buildFolder}/**/*.*`,
   srcFolder: srcFolder,
   buildFolder: buildFolder,
   rootFolder: rootFolder,

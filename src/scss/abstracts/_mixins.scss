@@ -11,11 +11,6 @@
   height: $height;
 }
 
-@mixin box($width, $height: $width) {
-  width: $width;
-  height: $height;
-}
-
 @mixin pseudo($display: block, $pos: absolute, $content: "") {
   content: $content;
   display: $display;

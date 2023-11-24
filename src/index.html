@@ -13,47 +13,45 @@
               Explore
             </button>
           </div>
-          <div class="head__slider swiper">
-            <div class="head__wrapper swiper-wrapper">
-              <div class="head-slide head-slide--active swiper-slide">
+          <div id="head-slider" class="head__slider-wrapper">
+            <div class="head__slider-line">
+              <div class="head-slide head-slide--active">
                 <div class="slider__item">
                   <img src="@img/pets/1.png" alt="pet_1" />
                 </div>
               </div>
-              <div class="head-slide swiper-slide">
+              <div class="head-slide">
                 <div class="slider__item">
                   <img src="@img/pets/1.png" alt="pet_2" />
                 </div>
               </div>
-              <div class="head-slide swiper-slide">
+              <div class="head-slide">
                 <div class="slider__item">
                   <img src="@img/pets/1.png" alt="pet_3" />
                 </div>
               </div>
-              <div class="head-slide swiper-slide">
+              <div class="head-slide">
                 <div class="slider__item">
                   <img src="@img/pets/1.png" alt="pet_4" />
                 </div>
               </div>
-              <div class="head__control">
-                <button type="button" class="head__arrow head__arrow--left">
-                  <img src="@img/icons/arrow.svg" alt="arrow-icon" />
-                </button>
-                <button
-                  type="button"
-                  class="head__arrow head__arrow--active head__arrow--right"
-                >
-                  <img src="@img/icons/arrow.svg" alt="arrow-icon" />
-                </button>
-              </div>
             </div>
           </div>
+          <div class="head__control">
+            <button type="button" class="head__arrow head__arrow--left">
+              <img src="@img/icons/arrow.svg" alt="arrow-icon" />
+            </button>
+            <button type="button" class="head__arrow head__arrow--right">
+              <img src="@img/icons/arrow.svg" alt="arrow-icon" />
+            </button>
+          </div>
         </div>
+
         <img class="head__bg" src="@img/BG.jpg" alt="head-bg" />
       </section>
     </main>
     @@include('html/footer.html',{})
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>
