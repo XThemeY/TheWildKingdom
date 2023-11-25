@@ -1,9 +1,8 @@
 @use "../abstracts" as *;
 //@import "../swiper-bundle.min.scss";
-html {
-}
 
 body {
+  overflow-x: hidden;
   font-family: $font-family, sans-serif;
   color: $text-Color;
   font-size: toRem($base-font-size);
