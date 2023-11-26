@@ -47,6 +47,7 @@
       z-index: 3;
       font-weight: bold;
       font-size: toRem(50);
+      overflow: auto;
     }
   }
 
@@ -81,6 +82,7 @@
 
 .nav__action {
   display: none;
+  padding-bottom: 20px;
   @media (max-width: 1030px) {
     display: flex;
     align-items: center;

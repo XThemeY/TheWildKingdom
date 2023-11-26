@@ -56,6 +56,7 @@ const menuBtn = document.querySelector(".menu__button");
 const menu = document.querySelector(".header__menu");
 const nav = document.querySelector(".menu__body");
 const body = document.body;
+let menuActive = false;
 
 document
   .querySelectorAll(".menu__body .link, .menu__body .button")
@@ -63,11 +64,20 @@ document
     el.addEventListener("click", showMenu);
   });
 
-function showMenu() {
+function showMenu(e) {
+  e.stopPropagation();
   menu.classList.toggle("menu--active");
   nav.classList.toggle("menu__body--active");
   body.classList.toggle("body--overflow");
 }
 
-window.addEventListener("resize", showMenu);
+nav.addEventListener("click", (e) => {
+  showMenu(e);
+});
+
+window.addEventListener("resize", function () {
+  menu.classList.remove("menu--active");
+  nav.classList.remove("menu__body--active");
+  body.classList.remove("body--overflow");
+});
 menuBtn.addEventListener("click", showMenu);
