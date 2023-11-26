@@ -15,16 +15,15 @@
 </head>
 
 
-  <body class="body">
+  <body>
     <header class="header">
   <div class="container header__container">
     <div class="header__menu menu">
-      <button type="button" class="menu__icon icon-menu">
-        <span></span>
-        <span></span>
+      <button type="button" class="menu__icon menu__button">
         <span></span>
       </button>
       <nav class="menu__body">
+        <hr class="menu__line" />
         <ul class="menu__list">
           <li class="menu__item">
             <a href="#" class="menu__link link">Home</a>
@@ -39,12 +38,23 @@
             <a href="#" class="menu__link link">Services</a>
           </li>
         </ul>
+        <hr class="menu__line" />
+        <div class="nav__action">
+          <a href="#" class="action-header__link link">Log in</a>
+          <a href="#" class="action-header__link link">Register</a>
+          <button
+            type="button"
+            class="action-header__button button button--border"
+          >
+            Contact
+          </button>
+        </div>
       </nav>
     </div>
     <div class="header__logo">
       <img src="img/logo.svg" alt="Site logo" />
     </div>
-    <div class="header__action action-header">
+    <div class="header__action">
       <a href="#" class="action-header__link link">Log in</a>
       <a href="#" class="action-header__link link">Register</a>
       <button type="button" class="action-header__button button button--border">
@@ -93,10 +103,10 @@
             </div>
           </div>
         </div>
-
         <img class="head__bg" src="img/BG.jpg" alt="head-bg" />
       </section>
     </main>
+
     <footer class="footer">
   <div class="container"></div>
 </footer>

@@ -1,13 +1,16 @@
 @use "../abstracts" as *;
-//@import "../swiper-bundle.min.scss";
 
 body {
-  overflow-x: hidden;
   font-family: $font-family, sans-serif;
   color: $text-Color;
   font-size: toRem($base-font-size);
   font-weight: 400;
   line-height: lineHeightToRem($base-line-height, $base-font-size);
+  min-width: 446px;
+}
+
+.body--overflow {
+  overflow: hidden;
 }
 
 button {
@@ -26,11 +29,7 @@ a {
   padding: 0 15px;
 }
 
-.menu {
-}
-
 .link {
-  transition: all ease-in-out 0.5s;
   &:hover {
     color: $link-text-Hover;
   }

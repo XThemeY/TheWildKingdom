@@ -25,10 +25,7 @@ function nextSlide() {
   lastClick = new Date().getTime();
 
   sliderItems = getSlides();
-  document.documentElement.style.setProperty(
-    "--transition",
-    "all ease-in-out 0.5s"
-  );
+
   if (index >= sliderItems.length - 1) {
     index = 0;
     sliderLine.style.right = `${offset * index}px`;
@@ -53,5 +50,24 @@ function resetSlider() {
     }, 500);
   }
 }
-
 btnRight.addEventListener("click", nextSlide);
+//-----------
+const menuBtn = document.querySelector(".menu__button");
+const menu = document.querySelector(".header__menu");
+const nav = document.querySelector(".menu__body");
+const body = document.body;
+
+document
+  .querySelectorAll(".menu__body .link, .menu__body .button")
+  .forEach((el) => {
+    el.addEventListener("click", showMenu);
+  });
+
+function showMenu() {
+  menu.classList.toggle("menu--active");
+  nav.classList.toggle("menu__body--active");
+  body.classList.toggle("body--overflow");
+}
+
+window.addEventListener("resize", showMenu);
+menuBtn.addEventListener("click", showMenu);
