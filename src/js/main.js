@@ -56,7 +56,6 @@ const menuBtn = document.querySelector(".menu__button");
 const menu = document.querySelector(".header__menu");
 const nav = document.querySelector(".menu__body");
 const body = document.body;
-let menuActive = false;
 
 document
   .querySelectorAll(".menu__body .link, .menu__body .button")
