@@ -7,6 +7,7 @@ body {
   font-weight: 400;
   line-height: lineHeightToRem($base-line-height, $base-font-size);
   min-width: 446px;
+  background-color: $bg-color;
 }
 
 .body--overflow {
@@ -23,18 +24,8 @@ a {
   color: $link-text-Color;
 }
 
-.container {
-  max-width: $max-width;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
 .link {
   &:hover {
     color: $link-text-Hover;
   }
-}
-
-.body {
-  background-color: $bg-color;
 }

@@ -6,14 +6,6 @@
   width: 100%;
   min-height: 1115px;
 
-  &__container {
-    position: relative;
-    padding-bottom: 55px;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-  }
-
   &__content {
     position: absolute;
     max-width: 645px;
@@ -33,9 +25,8 @@
     width: 100%;
     height: 100%;
     top: -150px;
-    left: 0;
+
     object-fit: cover;
-    object-position: top;
   }
 
   &__slider-wrapper {
