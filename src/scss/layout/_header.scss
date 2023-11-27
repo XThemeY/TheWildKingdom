@@ -100,11 +100,14 @@
   }
   &.top {
     position: absolute;
-    display: flex;
+    display: none;
     top: 0;
     right: 0;
     flex-direction: row;
     padding-bottom: 0;
     margin: 30px;
+    @media (max-width: 1030px) {
+      display: flex;
+    }
   }
 }
