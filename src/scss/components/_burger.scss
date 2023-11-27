@@ -36,12 +36,15 @@
         top: -15px;
       }
     }
-    @media (min-width: 1030px) {
+    @media (min-width: $tablet-width) {
       display: none;
+    }
+    @media (max-width: $mobile-width) {
+      margin-left: 18px;
     }
   }
   &__body {
-    @media (max-width: 1030px) {
+    @media (max-width: $tablet-width) {
       display: none;
     }
   }

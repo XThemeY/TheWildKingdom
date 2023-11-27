@@ -4,12 +4,15 @@
   position: relative;
 
   width: 100%;
-  min-height: 1115px;
 
   &__content {
     position: absolute;
     max-width: 645px;
     z-index: 2;
+    @media (max-width: $mobile-width) {
+      position: relative;
+      margin: 15px;
+    }
   }
   &__title {
     font-family: "Italiana";
@@ -18,14 +21,16 @@
     font-weight: 400;
     line-height: lineHeightToRem(100, 100);
     margin: 0 0 35px;
+    @media (max-width: $tablet-width) {
+      font-size: 5rem;
+    }
   }
   &__bg {
     z-index: -1;
-    position: absolute;
+    position: fixed;
     width: 100%;
-    height: 100%;
-    top: -150px;
-
+    height: 100vh;
+    top: 0;
     object-fit: cover;
   }
 
@@ -34,10 +39,18 @@
     align-items: center;
     position: relative;
     overflow-x: hidden;
-    max-width: 1143px;
+
     height: 750px;
     margin-left: 416px;
     padding-left: 15px;
+    @media (max-width: $tablet-width) {
+      margin-left: 329px;
+    }
+    @media (max-width: $mobile-width) {
+      margin: 0 auto;
+      width: 85%;
+      height: 555px;
+    }
   }
 
   &__slider-line {
@@ -46,6 +59,9 @@
     display: flex;
     gap: 40px;
     transition: var(--transition);
+    @media (max-width: $tablet-width) {
+      gap: 30px;
+    }
   }
   &-slide {
     position: relative;
@@ -54,6 +70,9 @@
     width: 120px;
     align-self: center;
     transition: var(--transition);
+    @media (max-width: $tablet-width) {
+      width: 100px;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -65,6 +84,13 @@
       border-radius: 50%;
       z-index: -1;
       transition: var(--transition);
+      @media (max-width: $tablet-width) {
+        width: 100px;
+
+        height: 100px;
+        top: 12px;
+        left: -2px;
+      }
     }
 
     &--active {
@@ -72,6 +98,12 @@
       z-index: 1;
       width: 650px;
 
+      @media (max-width: $tablet-width) {
+        width: 550px;
+      }
+      @media (max-width: $mobile-width) {
+        width: 330px;
+      }
       &::before {
         content: "";
         position: absolute;
@@ -83,20 +115,43 @@
         border-radius: 50%;
         z-index: -1;
         transition: var(--transition);
+        @media (max-width: $tablet-width) {
+          width: 550px;
+          height: 550px;
+          top: 60px;
+          left: -10px;
+        }
+        @media (max-width: $mobile-width) {
+          width: 330px;
+          height: 330px;
+          top: 39px;
+          left: -7px;
+        }
       }
       & > .cat {
         left: -13px;
         top: -10px;
         scale: 1.02;
+        @media (max-width: $mobile-width) {
+          left: -8px;
+          top: -2px;
+        }
       }
       & > .dachshund {
         left: -5px;
         scale: 1.03;
+        @media (max-width: $mobile-width) {
+          left: -4px;
+        }
       }
       & > .cat-white {
         left: 3px;
         top: 6px;
         scale: 1.04;
+        @media (max-width: $mobile-width) {
+          left: 0px;
+          top: 6px;
+        }
       }
     }
   }
@@ -105,8 +160,12 @@
     position: absolute;
     bottom: 70px;
     right: 0;
+    z-index: 4;
     text-align: right;
     padding-right: 50px;
+    @media (max-width: $mobile-width) {
+      padding-right: 15px;
+    }
   }
   &__btn-arrow {
     width: 60px;

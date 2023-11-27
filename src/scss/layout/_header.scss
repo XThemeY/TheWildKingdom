@@ -4,7 +4,7 @@
 
   &__logo {
     width: 216px;
-    @media (max-width: 1030px) {
+    @media (max-width: $tablet-width) {
       margin: 0 auto;
     }
   }
@@ -14,7 +14,7 @@
     gap: 40px;
     align-items: center;
 
-    @media (max-width: 1030px) {
+    @media (max-width: $tablet-width) {
       display: none;
     }
   }

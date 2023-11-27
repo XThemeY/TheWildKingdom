@@ -15,11 +15,14 @@ let index = 0;
 let offset = 160;
 let lastClick = 0;
 const getSlides = () => document.querySelectorAll(".head-slide");
-document.documentElement.style.setProperty(
-  "--transition",
-  "all ease-in-out 0.5s"
-);
+
 function nextSlide() {
+  document.documentElement.style.setProperty(
+    "--transition",
+    "all ease-in-out 0.5s"
+  );
+  window.innerWidth <= 1130 ? (offset = 130) : (offset = 160);
+
   //Проверка на частые клики мыши
   if (new Date().getTime() - lastClick < 500) return;
   lastClick = new Date().getTime();
