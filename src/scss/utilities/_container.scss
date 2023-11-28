@@ -29,3 +29,10 @@
     }
   }
 }
+
+.about-us {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
