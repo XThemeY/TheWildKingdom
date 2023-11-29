@@ -21,6 +21,7 @@ export const path = {
     images: {
       img: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
       svg: `${srcFolder}/img/**/*.svg`,
+      svgicons: `${srcFolder}/img/icons/*_icon.svg`,
     },
   },
   watch: {

@@ -38,6 +38,8 @@
     height: 100vh;
     top: 0;
     object-fit: cover;
+    background-image: url("../img/BG.jpg");
+    @include retina-image("../img/BG@2x.jpg");
   }
 
   &__slider-wrapper {
@@ -210,11 +212,18 @@
 .about-us {
   position: relative;
   padding-top: 150px;
+  padding-bottom: 165px;
+  background-color: #efe9dd;
+  isolation: isolate;
   &__content {
+    position: relative;
     display: flex;
+    margin-bottom: 100px;
     line-height: lineHeightToRem(25, 16);
     color: #222220;
+
     & > .item__image {
+      position: relative;
       width: 830px;
       height: 554px;
       flex-shrink: 0;
@@ -241,14 +250,11 @@
     width: 100%;
     height: 100vh;
     top: 0;
-    object-fit: cover;
-
-    background: url(../img/bg-img_01.jpg) lightgray 50% / cover no-repeat;
-    background-position: bottom 900px right 0;
-
     mix-blend-mode: lighten;
-
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: url(../img/bg-img_01.jpg);
+    background-position: bottom 280px right 0;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -270,11 +276,25 @@
     font-weight: 400;
     text-transform: capitalize;
   }
-  &__text {
-    font-weight: 400;
-  }
+
   &__button--benefit {
     color: #222220;
     background: url("../img/bg-btn.jpg") 100% / cover no-repeat;
   }
+  &__icon {
+    margin-bottom: 30px;
+    padding: 30px;
+    width: 140px;
+    height: 140px;
+    background: url("../img/bg-btn.jpg") 100% / cover no-repeat;
+    border-radius: 50%;
+  }
+}
+.benefits-item {
+  text-align: center;
+  color: #222220;
+  font-family: "Italiana";
+  font-size: toRem(24);
+  line-height: normal;
+  text-transform: capitalize;
 }
