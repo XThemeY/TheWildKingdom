@@ -293,7 +293,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    @media (max-width: $mobile-width) {
+    @media (max-width: $smallest-width) {
       flex-direction: column;
       gap: 20px;
     }
