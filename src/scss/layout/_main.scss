@@ -320,3 +320,34 @@
   line-height: normal;
   text-transform: capitalize;
 }
+
+.big-cat {
+  position: relative;
+  padding-top: clamp(80px, 9vw, 160px);
+  padding-bottom: clamp(80px, 9vw, 160px);
+  padding-left: clamp(0px, 9vw, 155px);
+  background: linear-gradient(
+    90deg,
+    rgba(193, 171, 129, 1) 42%,
+    rgba(34, 34, 32, 1) 42%
+  );
+  z-index: 1;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 370px;
+    height: 370px;
+    background-color: red;
+    background: url(../img/group_1.svg);
+    display: block;
+    background-position-x: 370px;
+    content: "";
+    z-index: -1;
+  }
+  &__img {
+    padding: 20px;
+    width: clamp(200px, 84vw, 790px);
+    border: 1px solid #fff;
+  }
+}
