@@ -3,6 +3,9 @@
   max-width: $max-width;
   margin: 0 auto;
   padding: 0 15px;
+  @media (max-width: $mobile-width) {
+    padding: 0 30px;
+  }
 }
 
 .header {
@@ -34,5 +37,32 @@
   &__container {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.services {
+  &__container {
+    display: flex;
+    align-items: center;
+    @media (max-width: $tablet-width) {
+      flex-direction: column-reverse;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 830px;
+      align-items: unset;
+    }
+  }
+}
+
+.items-services {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 125px;
+    column-gap: 30px;
+    @media (max-width: $tablet-width) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
   }
 }
