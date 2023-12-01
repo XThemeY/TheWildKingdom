@@ -495,6 +495,135 @@
   }
 }
 
+.products {
+  background-color: #efe9dd;
+  position: relative;
+  margin-top: -1px;
+  padding-bottom: clamp(80px, 9vw, 160px);
+  z-index: 1;
+  &:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: url(../img/bg-img_01.jpg);
+    background-position: bottom 120% right 50%;
+    background-repeat: no-repeat;
+    mix-blend-mode: lighten;
+    transform: scaleX(-1);
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    text-align: center;
+    gap: 20px;
+    text-transform: capitalize;
+    color: #222220;
+    margin-bottom: 50px;
+    padding: 0 15px;
+  }
+  &__label {
+    font-size: toRem(16);
+    font-weight: 400;
+  }
+  &__title {
+    font-family: "Italiana";
+    font-weight: 400;
+    font-size: toRem(48);
+    color: #9d875c;
+  }
+
+  &__items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    row-gap: 50px;
+    column-gap: 55px;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+
+  &__button {
+    color: #222220;
+    background: url("../img/bg-btn.jpg") 100% / cover no-repeat;
+  }
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  margin: 0 auto;
+  &__image {
+    position: relative;
+    background: url("../img/bg-card.jpg") 100% / cover no-repeat;
+    margin-bottom: 40px;
+    width: 350px;
+    height: 350px;
+    &::before {
+      opacity: 0;
+      content: "";
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      cursor: pointer;
+      background-color: #9d875c;
+      mix-blend-mode: multiply;
+      transition: all ease-in-out 0.5s;
+    }
+
+    &:hover {
+      opacity: 1;
+      & > .card__button {
+        opacity: 1;
+      }
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+  }
+
+  &__name,
+  &__price {
+    font-size: toRem(24);
+    font-weight: normal;
+  }
+
+  &__raiting {
+    font-size: toRem(26);
+    display: flex;
+    gap: 10px;
+  }
+
+  &__button {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #222220;
+    background: url("../img/bg-card.jpg") 100% / cover no-repeat;
+    transition: all ease-in-out 0.5s;
+    &:hover {
+      color: #000000;
+      border: 1px solid #3f3522;
+    }
+  }
+}
+
 ._icon-arrow {
   display: inline-block;
   background-image: url("../img/icons/arrow.svg");
