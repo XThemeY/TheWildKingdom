@@ -58,7 +58,7 @@
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 125px;
+    row-gap: clamp(toRem(50), 6vw, toRem(125));
     column-gap: 30px;
     @media (max-width: $tablet-width) {
       grid-template-columns: 1fr;
@@ -72,5 +72,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+.contacts {
+  &__container {
+    padding: 0 70px;
   }
 }
