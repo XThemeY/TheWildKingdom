@@ -176,18 +176,17 @@
       padding-right: 15px;
     }
   }
-  &__btn-arrow {
-    width: 60px;
-    border: none;
-    background: transparent;
-    transition: all ease-in-out 0.5s;
+}
+.btn-arrow {
+  width: 60px;
+  border: none;
+  background: transparent;
+  transition: all ease-in-out 0.5s;
 
-    &:hover {
-      scale: 1.3;
-    }
+  &:hover {
+    scale: 1.3;
   }
 }
-
 .cat {
   position: relative;
   left: 0;
@@ -275,6 +274,9 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  &-icon {
+    margin-bottom: 30px;
+  }
 }
 
 .benefits-item {
@@ -318,16 +320,15 @@
   &__item {
     text-align: center;
   }
-  &__icon {
-    margin-bottom: 30px;
-    padding: 30px;
-    width: 140px;
-    height: 140px;
-    background: url("../img/bg-btn.jpg") 100% / cover no-repeat;
-    border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+}
+.items__icon {
+  padding: 30px;
+  width: 140px;
+  height: 140px;
+  background: url("../img/bg-btn.jpg") 100% / cover no-repeat;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .services {
@@ -415,6 +416,10 @@
   padding-top: 160px;
   padding-bottom: 161px;
   isolation: isolate;
+  @media (max-width: $mobile-width) {
+    padding-top: 80px;
+    padding-bottom: 81px;
+  }
   &:after {
     position: absolute;
     content: "";
@@ -466,6 +471,9 @@
     border: 1px solid transparent;
     transition: all ease-in-out 0.5s;
     overflow: hidden;
+    @media (max-width: $mobile-width) {
+      margin-bottom: 25px;
+    }
     &:hover {
       border: 1px solid #9d875c;
     }
@@ -574,8 +582,9 @@
 }
 
 .card {
+  max-width: 350px;
   position: relative;
-  width: 350px;
+
   margin: 0 auto;
   &__image {
     position: relative;
@@ -678,15 +687,21 @@
   background-color: #efe9dd;
   z-index: 1;
   padding-bottom: 160px;
+  @media (max-width: $mobile-width) {
+    padding-bottom: 80px;
+  }
   &::after {
     position: absolute;
     content: "";
     display: block;
     width: 100%;
-    height: clamp(toRem(25), 6vw, toRem(140));
+    height: 140px;
     top: 0;
     z-index: -1;
     background-color: #c1b081;
+    @media (max-width: $mobile-width) {
+      height: 95px;
+    }
   }
 
   &:before {
@@ -715,6 +730,7 @@
   }
 
   &__media {
+    position: relative;
     margin-right: 100px;
     z-index: 1;
     @media (max-width: $tablet-width) {
@@ -723,20 +739,24 @@
     }
   }
   &__top-image {
+    position: relative;
+    z-index: 2;
     margin-bottom: -70px;
     margin-right: 80px;
     border: 1px solid #ffffff;
     padding: 20px;
   }
   &__bottom-image {
+    position: relative;
+    z-index: 3;
     margin-left: 80px;
     outline: 1px solid #c1b081;
     padding: 20px;
   }
   &__play {
-    position: relative;
-    width: clamp(160px, 14vw, 220px);
-    height: clamp(160px, 14vw, 220px);
+    position: absolute;
+    width: clamp(100px, 14vw, 220px);
+    height: clamp(100px, 14vw, 220px);
     border-radius: 50%;
     border: 20px solid transparent;
     outline: 1px solid #c1ab81;
@@ -745,12 +765,20 @@
     background-size: cover;
     background-repeat: no-repeat;
     color: #222220;
-    font-size: 48px;
+    font-size: toRem(48);
     text-align: center;
-    top: 360px;
-    left: -30px;
+    top: -8%;
+    left: -14%;
     transition: all ease-in-out 0.5s;
-    z-index: 1;
+    z-index: 5;
+    @media (max-width: $tablet-width) {
+      top: -5%;
+      left: -8%;
+      font-size: toRem(36);
+    }
+    @media (max-width: $mobile-width) {
+      border-width: 10px;
+    }
     &::after {
       content: "";
       display: block;
@@ -782,6 +810,9 @@
   @media (max-width: $tablet-width) {
     margin: 0 auto;
   }
+  @media (max-width: $mobile-width) {
+    margin-left: 30px;
+  }
   &__label {
     font-size: toRem(16);
     font-weight: 400;
@@ -790,12 +821,13 @@
   &__title {
     color: #9d875c;
     font-family: "Italiana";
-    font-size: toRem(48);
+    font-size: clamp(toRem(24), 5vw, toRem(48));
     font-weight: 400;
     text-transform: capitalize;
   }
   &__hours {
-    font-size: toRem(20);
+    font-size: clamp(toRem(15), 5vw, toRem(20));
+
     line-height: lineHeightToRem(40, 20);
     position: relative;
     .icon-clock-fill_icon {
@@ -810,9 +842,10 @@
 
   &__contacts {
     position: relative;
-    font-size: toRem(20);
+    font-size: clamp(toRem(15), 5vw, toRem(20));
     line-height: lineHeightToRem(40, 20);
     color: #222220;
+
     & a {
       color: #222220;
       &:hover {
@@ -839,7 +872,110 @@
       border-color: #7c7c75;
     }
   }
+
+  &__mail {
+    font-size: clamp(toRem(10), 4vw, toRem(20));
+  }
   &__address {
     margin-bottom: 30px;
+  }
+}
+
+.reviews {
+  padding-top: 20px;
+  padding-bottom: 160px;
+  margin-top: -1px;
+  background-color: #efe9dd;
+
+  .content__body {
+    position: relative;
+    & > .btn-arrow {
+      width: 75px;
+      height: 33px;
+    }
+  }
+
+  &__button-left {
+    position: absolute;
+
+    top: 50%;
+    left: 5%;
+    transition: none;
+    transform: translateY(-50%) scale(-1, 1);
+
+    @media (max-width: $mobile-width) {
+      top: 115%;
+      left: 20%;
+    }
+  }
+
+  &__button-right {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    transition: none;
+    @media (max-width: $mobile-width) {
+      top: 115%;
+      right: 20%;
+    }
+  }
+  &__icon {
+    margin-bottom: 40px;
+  }
+  &__text {
+    color: #222220;
+    margin: 0 auto;
+    font-size: clamp(toRem(15), 5vw, toRem(30));
+    text-align: center;
+    max-width: clamp(340px, 64vw, 1185px);
+    line-height: lineHeightToRem(50, 30);
+    margin-bottom: 50px;
+  }
+  &__name {
+    color: #9d875c;
+    text-align: center;
+    font-family: "Italiana";
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: toRem(48);
+    @media (max-width: $mobile-width) {
+      font-size: toRem(36);
+    }
+  }
+}
+
+.text-reviews {
+  &__icon-left {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "\e905";
+      display: block;
+      top: -25px;
+      right: 30px;
+      font-family: "icomoon";
+      color: #9d875c;
+      @media (max-width: $mobile-width) {
+        right: 15px;
+      }
+    }
+  }
+  &__icon-right {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "\e905";
+      display: block;
+      top: 0px;
+      left: 30px;
+      font-family: "icomoon";
+      color: #9d875c;
+
+      transform: scale(-1, 1);
+      @media (max-width: $mobile-width) {
+        left: 15px;
+      }
+    }
   }
 }

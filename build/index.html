@@ -96,7 +96,7 @@
               </div>
             </div>
             <div class="head__control">
-              <button type="button" class="head__btn-arrow">
+              <button type="button" class="btn-arrow">
                 <img src="img/icons/arrow.svg" alt="arrow-icon" />
               </button>
             </div>
@@ -135,13 +135,13 @@
           </div>
           <div class="about__items items-about">
             <div class="items-about__item">
-              <div class="items-about__icon">
+              <div class="about-icon items__icon">
                 <img alt="medal-icon" src="img/icons/icons.svg#medal_icon" />
               </div>
               <div class="items-about__text">Pet Food</div>
             </div>
             <div class="items-about__item">
-              <div class="items-about__icon">
+              <div class="about-icon items__icon">
                 <img
                   src="img/icons/icons.svg#syringe_icon"
                   alt="syringe_icon"
@@ -150,7 +150,7 @@
               <div class="about-us__item-text">Pet Care</div>
             </div>
             <div class="items-about__item">
-              <div class="items-about__icon">
+              <div class="about-icon items__icon">
                 <img
                   src="img/icons/icons.svg#pet-house_icon"
                   alt="pet_house_icon"
@@ -478,12 +478,11 @@
                 <img src="img/pets/contacts_1.jpg" alt="image" />
               </div>
               <div class="contacts__bottom-image">
-                <img src="img/pets/contacts_2.jpg" alt="image" />
+                <img src="img/pets/contacts_2.jpg" alt="image" /><button
+                  type="button"
+                  class="contacts__play icon-play-fill_icon"
+                ></button>
               </div>
-              <button
-                type="button"
-                class="contacts__play icon-play-fill_icon"
-              ></button>
             </div>
 
             <div class="contacts__content content-contacts">
@@ -520,7 +519,35 @@
           </div>
         </div>
       </section>
-      <section class="page__reviews reviews"></section>
+
+      <section class="page__reviews reviews">
+        <div class="container reviews__container">
+          <div class="reviews__body">
+            <div class="reviews__icon items__icon">
+              <img src="img/icons/icons.svg#paw_icon" alt="image" />
+            </div>
+            <div class="reviews__content">
+              <div class="content__body">
+                <button type="button" class="reviews__button-left btn-arrow">
+                  <img src="img/icons/arrow.svg" alt="arrow-icon" />
+                </button>
+                <p class="reviews__text text-reviews">
+                  <span class="text-reviews__icon-left"></span>Lorem ipsum dolor
+                  sit amet, consectetur adipiscing elit. Etiam vulputate
+                  pharetra ante id congue. Cras feugiat, diam a placerat
+                  posuere, arcu risus porta elit, sed finibus magna lorem ut
+                  turpis.<span class="text-reviews__icon-right"></span>
+                </p>
+                <button type="button" class="reviews__button-right btn-arrow">
+                  <img src="img/icons/arrow.svg" alt="arrow-icon" />
+                </button>
+              </div>
+
+              <h5 class="reviews__name">Etiam vulputate</h5>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">

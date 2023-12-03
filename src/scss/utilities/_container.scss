@@ -3,9 +3,6 @@
   max-width: $max-width;
   margin: 0 auto;
   padding: 0 15px;
-  @media (max-width: $mobile-width) {
-    padding: 0 30px;
-  }
 }
 
 .header {
@@ -77,5 +74,8 @@
 .contacts {
   &__container {
     padding: 0 70px;
+    @media (max-width: $tablet-width) {
+      padding: 0 35px;
+    }
   }
 }
