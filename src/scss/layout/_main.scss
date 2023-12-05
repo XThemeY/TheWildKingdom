@@ -1,5 +1,12 @@
 @use "../abstracts" as *;
 
+.site__logo {
+  width: 216px;
+  @media (max-width: $tablet-width) {
+    margin: 0 auto;
+  }
+}
+
 .head {
   position: relative;
 
@@ -886,7 +893,9 @@
   padding-bottom: 160px;
   margin-top: -1px;
   background-color: #efe9dd;
-
+  @media (max-width: $mobile-width) {
+    padding-bottom: 100px;
+  }
   .content__body {
     position: relative;
     & > .btn-arrow {
@@ -895,28 +904,27 @@
     }
   }
 
-  &__button-left {
+  &__button-prev {
     position: absolute;
 
     top: 50%;
     left: 5%;
-    transition: none;
     transform: translateY(-50%) scale(-1, 1);
-
+    transition: all ease-in-out 0.5s;
     @media (max-width: $mobile-width) {
-      top: 115%;
+      top: 140%;
       left: 20%;
     }
   }
 
-  &__button-right {
+  &__button-next {
     position: absolute;
     top: 50%;
     right: 5%;
     transform: translateY(-50%);
-    transition: none;
+    transition: all ease-in-out 0.5s;
     @media (max-width: $mobile-width) {
-      top: 115%;
+      top: 140%;
       right: 20%;
     }
   }
@@ -928,9 +936,12 @@
     margin: 0 auto;
     font-size: clamp(toRem(15), 5vw, toRem(30));
     text-align: center;
-    max-width: clamp(340px, 64vw, 1185px);
+    max-width: clamp(540px, 64vw, 1185px);
     line-height: lineHeightToRem(50, 30);
     margin-bottom: 50px;
+    @media (max-width: $mobile-width) {
+      margin-bottom: 0;
+    }
   }
   &__name {
     color: #9d875c;
@@ -946,7 +957,7 @@
 }
 
 .text-reviews {
-  &__icon-left {
+  &__icon-prev {
     position: relative;
     &::before {
       position: absolute;
@@ -961,7 +972,7 @@
       }
     }
   }
-  &__icon-right {
+  &__icon-next {
     position: relative;
     &::before {
       position: absolute;

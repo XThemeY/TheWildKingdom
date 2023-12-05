@@ -2,7 +2,7 @@ import * as functions from "./modules/functions.js";
 functions.isWebp();
 
 const sliderLine = document.querySelector(".head__slider-line");
-const btnRight = document.querySelector(".head__btn-arrow");
+const btnRight = document.querySelector(".btn-arrow");
 const slides = document.querySelectorAll(".head-slide");
 
 for (let i = 0; i < slides.length; i++) {
